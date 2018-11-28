@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|VT323');
+
+$clr-darkGrey: #393344;
+$clr-lightGreen: #45C497;
+$font-hanSans: 'Bangers';
+$font-retro: 'VT323';
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: $clr-darkGrey;
+}
+
+h1.title {
+   color: $clr-lightGreen;
+   font-family: $font-hanSans;
+   font-size: 5rem;
+   letter-spacing: 5px;
+   margin-top: 1em;
+   text-align: center;
+}
+
+.dice-container {
+   max-width: 960px;
+   margin: 10em auto;
+   display: flex;
+   justify-content: space-around;
+
+   h2 {
+      color: $clr-lightGreen;
+      font-family: $font-retro;
+      font-size: 3rem;
+      margin-bottom: .25em;
+      text-align: center;
+   }
+
+   p {
+      color: $clr-lightGreen;
+      font-family: $font-hanSans;
+      font-size: 1.25rem;
+      letter-spacing: 2px;
+      margin: .25em .75em;
+   }
+}
+
+.center {
+   display: flex;
+   justify-content: center;
+
+   .dice {
+      background: $clr-lightGreen;
+      border: 0;
+      box-shadow: 0 9px rgb(0, 0, 0);
+      border-radius: 50px;
+      color: #fff;
+      cursor: pointer;
+      font-family: $font-hanSans;
+      font-size: 2rem;
+      padding: .75em 2em;
+      text-align: center;
+
+      &:active {
+         box-shadow: 0 5px #000;
+         transform: translateY(2px);
+      }
+   }
+}
+
+.click-me {
+   animation-name: clickMe;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate-reverse;
+   transition: ease-in-out;
+}
+
+@keyframes clickMe {
+   25% {
+      opacity: 0.5;
+   }
+
+   50% {
+      opacity: 1;
+   }
+
+   75% {
+      opacity: 0.5;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+@media screen and (max-width: 960px) {
+   .dice-container {
+      max-width: 500px;
+      margin: 6em auto;
+
+      .player1,
+      .player2 {
+         flex-basis: 50%;
+         margin: 0 2em;
+
+         img {
+            width: 100%;
+         }
+      }
+   }
+}

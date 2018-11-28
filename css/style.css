@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Bangers|VT323");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #393344;
+}
+
+h1.title {
+  color: #45C497;
+  font-family: "Bangers";
+  font-size: 5rem;
+  letter-spacing: 5px;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.dice-container {
+  max-width: 960px;
+  margin: 10em auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.dice-container h2 {
+  color: #45C497;
+  font-family: "VT323";
+  font-size: 3rem;
+  margin-bottom: .25em;
+  text-align: center;
+}
+
+.dice-container p {
+  color: #45C497;
+  font-family: "Bangers";
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  margin: .25em .75em;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.center .dice {
+  background: #45C497;
+  border: 0;
+  -webkit-box-shadow: 0 9px black;
+          box-shadow: 0 9px black;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Bangers";
+  font-size: 2rem;
+  padding: .75em 2em;
+  text-align: center;
+}
+
+.center .dice:active {
+  -webkit-box-shadow: 0 5px #000;
+          box-shadow: 0 5px #000;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.click-me {
+  -webkit-animation-name: clickMe;
+          animation-name: clickMe;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+}
+
+@-webkit-keyframes clickMe {
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes clickMe {
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .dice-container {
+    max-width: 500px;
+    margin: 6em auto;
+  }
+  .dice-container .player1,
+  .dice-container .player2 {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin: 0 2em;
+  }
+  .dice-container .player1 img,
+  .dice-container .player2 img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
