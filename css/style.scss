@@ -20,13 +20,13 @@ h1.title {
    font-family: $font-hanSans;
    font-size: 5rem;
    letter-spacing: 5px;
-   margin-top: 1em;
+   margin-top: .5em;
    text-align: center;
 }
 
 .dice-container {
    max-width: 960px;
-   margin: 10em auto;
+   margin: 3em auto 3em auto !important;
    display: flex;
    justify-content: space-around;
 
@@ -99,7 +99,7 @@ h1.title {
 @media screen and (max-width: 960px) {
    .dice-container {
       max-width: 500px;
-      margin: 6em auto;
+      margin: 5em auto;
 
       .player1,
       .player2 {
