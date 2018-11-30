@@ -97,10 +97,13 @@ h1.title {
 }
 
 @media screen and (max-width: 960px) {
+   h1.title {
+      font-size: 3rem;
+   }
    .dice-container {
       max-width: 500px;
       margin: 5em auto;
-
+      font-size: .75rem;
       .player1,
       .player2 {
          flex-basis: 50%;
@@ -109,6 +112,21 @@ h1.title {
          img {
             width: 100%;
          }
+      }
+   }
+}
+
+// Large screens
+@media screen and (min-width: 100em){
+   body {
+      font-size: 2rem;
+   }
+   .dice-container{
+      max-width: 40em;
+   }
+   .center {
+      .dice {
+         margin-top: 3em;
       }
    }
 }
